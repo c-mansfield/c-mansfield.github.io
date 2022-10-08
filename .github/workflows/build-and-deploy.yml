@@ -26,7 +26,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ghcr.io/cole-mansfield/personal-site:latest
+        images: ghcr.io/cole-mansfield/personal-site
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
