@@ -21,8 +21,7 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build the hello-docker Docker image
+    - name: Build personal site Docker image
       run: |
         docker build . --tag ghcr.io/cole-mansfield/personal-site:latest
-        docker run ghcr.io/cole-mansfield/personal-site:latest
         docker push ghcr.io/cole-mansfield/personal-site:latest
