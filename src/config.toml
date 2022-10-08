@@ -1,0 +1,5 @@
+languageCode = 'en-uk'
+title = 'Cole Mansfield'
+theme = "introduction"
+baseURL = ""
+relativeURLs = "True"
