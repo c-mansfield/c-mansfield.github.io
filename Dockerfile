@@ -9,14 +9,15 @@ RUN tar -zxvf hugo.tar.gz
 RUN /hugo version
 
 # Install Node Modules
-WORKDIR /usr/src/app
+WORKDIR /site
 COPY /src/package*.json ./
 RUN npm i
 
 # Build Hugo
-COPY /src /usr/src/app
+COPY /src /site
 RUN /hugo --minify
 
 #Copy static files to Nginx
 FROM nginx:alpine
-COPY --from=build /usr/src/app/public /usr/share/nginx/html
+COPY --from=build /site/public /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
