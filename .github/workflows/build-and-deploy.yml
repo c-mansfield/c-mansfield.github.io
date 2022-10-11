@@ -29,7 +29,7 @@ jobs:
       - name: Upload site to artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: my-site
+          name: github-pages
           path: ${{ steps.extract.outputs.destination }}
           retention-days: 1
           if-no-files-found: warn
@@ -47,5 +47,3 @@ jobs:
       - name: Deploy site to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        with:
-          artifact_name: my-site
