@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout project
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - name: Build Docker image
         run: |
           docker build . --file Dockerfile --tag my-site
@@ -31,3 +33,11 @@ jobs:
           path: ${{ steps.extract.outputs.destination }}
           retention-days: 1
           if-no-files-found: warn
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy site to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          artifact_name: my-site
