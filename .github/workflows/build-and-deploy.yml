@@ -14,17 +14,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout project
-      uses: actions/checkout@v3
-      with:
-        submodules: recursive
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build personal-site Docker image
-      run: |
-        docker build . --tag ghcr.io/cole-mansfield/personal-site:latest
-        docker push ghcr.io/cole-mansfield/personal-site:latest
+      - name: Checkout project
+        uses: actions/checkout@v3
+      - name: Build Docker image
+        run: |
+          docker build . --file Dockerfile --tag my-site
+      - uses: shrink/actions-docker-extract@v1
+        id: extract
+        with:
+          image: 'my-site'
+          path: 'usr/share/nginx/html/.'
+      - name: Upload site to artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-site
+          path: ${{ steps.extract.outputs.destination }}
+          retention-days: 1
+          if-no-files-found: warn
