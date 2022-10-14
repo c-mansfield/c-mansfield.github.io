@@ -14,21 +14,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout project
+      - name: Checkout Project
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Initial setup
+      - name: Initial Setup
         run: mkdir app
-      - name: Build Docker image
+      - name: Build Docker Image
         run: |
           docker build . --file Dockerfile --tag my-site
           docker cp $(docker create my-site):/usr/share/nginx/html/. app
+      - name: Clean & Compress Build Output
+        run: tar --dereference --hard-dereference --directory ./app -cvf app.tar .
       - name: Upload Site To Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
-          path: app
+          path: ./app.tar
           retention-days: 1
           if-no-files-found: warn
   deploy:
