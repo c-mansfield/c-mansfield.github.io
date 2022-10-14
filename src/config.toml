@@ -3,3 +3,21 @@ title = 'Cole Mansfield'
 theme = "introduction"
 baseURL = ""
 relativeURLs = "True"
+
+[params]
+    themeStyle = "auto"
+    favicon = "/static/img/favicon.png"
+    fadeIn = false
+
+[[params.social]]
+    url   = "https://www.linkedin.com/in/cole-m-49b97510a/"
+    icon  = "github"
+    icon_pack = "fab"
+[[params.social]]
+    url   = "https://www.linkedin.com/in/cole-m-49b97510a/"
+    icon  = "linkedin-in"
+    icon_pack = "fab"
+[[params.social]]
+    url = "mailto:colemansfield@gmail.com"
+    icon = "paper-plane"
+    icon_pack = "fas"
