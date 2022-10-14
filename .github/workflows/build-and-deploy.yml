@@ -26,7 +26,7 @@ jobs:
         with:
           image: 'my-site'
           path: 'usr/share/nginx/html/.'
-      - name: Upload site to artifacts
+      - name: Upload Site To Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: github-pages
@@ -34,16 +34,19 @@ jobs:
           retention-days: 1
           if-no-files-found: warn
   deploy:
+    concurrency: ci-${{ github.ref }}
     needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy site to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download Site Artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: github-pages
+
+      - name: Deploy Site To github-pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: 'github-pages'
