@@ -6,18 +6,19 @@ relativeURLs = "True"
 
 [params]
     themeStyle = "auto"
-    favicon = "/static/img/favicon.png"
+    favicon = "/img/favicon.png"
     fadeIn = false
+    showMenu = false
 
-[[params.social]]
-    url   = "https://www.linkedin.com/in/cole-m-49b97510a/"
-    icon  = "github"
-    icon_pack = "fab"
-[[params.social]]
-    url   = "https://www.linkedin.com/in/cole-m-49b97510a/"
-    icon  = "linkedin-in"
-    icon_pack = "fab"
-[[params.social]]
-    url = "mailto:colemansfield@gmail.com"
-    icon = "paper-plane"
-    icon_pack = "fas"
+    [[params.social]]
+        url   = "https://github.com/cole-mansfield"
+        icon  = "github"
+        icon_pack = "fab"
+    [[params.social]]
+        url   = "https://www.linkedin.com/in/cole-m-49b97510a"
+        icon  = "linkedin-in"
+        icon_pack = "fab"
+    [[params.social]]
+        url = "mailto:colemansfield@gmail.com"
+        icon = "paper-plane"
+        icon_pack = "fas"
