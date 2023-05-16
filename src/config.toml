@@ -22,3 +22,13 @@ relativeURLs = "True"
         url = "mailto:colemansfield@gmail.com"
         icon = "paper-plane"
         icon_pack = "fas"
+
+    [languages]
+        [languages.en]
+            languageName     = "English"
+            languageCode     = "en-us"
+            contentDir       = "content/en"
+            weight           = 0
+            title            = "Introduction"
+        [languages.en.params]
+             footerText   = ""
