@@ -22,3 +22,7 @@ relativeURLs = "True"
         url = "mailto:colemansfield@gmail.com"
         icon = "paper-plane"
         icon_pack = "fas"
+
+    [languages]
+        [languages.en.params]
+            footerText   = "Contact me at: colemansfield@gmail.com"
