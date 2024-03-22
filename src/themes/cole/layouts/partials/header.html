@@ -1,2 +1,5 @@
+{{ $styles := resources.Get "style.css" }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
 <h1>{{ site.Title }}</h1>
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
