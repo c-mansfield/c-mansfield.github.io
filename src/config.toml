@@ -4,6 +4,11 @@ theme = "cole"
 baseURL = ""
 relativeURLs = "True"
 
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            hardWraps = true
+
 [params]
     themeStyle = "auto"
     favicon = "/img/favicon.png"
