@@ -564,6 +564,10 @@ video {
   min-height: 100%;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -584,6 +588,10 @@ video {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-jost {
   font-family: Jost, sans-serif;
 }
@@ -591,4 +599,20 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.\[\&\>svg\]\:h-7>svg {
+  height: 1.75rem;
+}
+
+.\[\&\>svg\]\:w-7>svg {
+  width: 1.75rem;
+}
+
+.\[\&\>svg\]\:fill-\[\#ea4335\]>svg {
+  fill: #ea4335;
+}
+
+.\[\&\>svg\]\:fill-\[\#333\]>svg {
+  fill: #333;
 }

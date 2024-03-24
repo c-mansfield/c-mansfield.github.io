@@ -14,20 +14,3 @@ relativeURLs = "True"
     favicon = "/img/favicon.png"
     fadeIn = false
     showMenu = false
-
-    [[params.social]]
-        url   = "https://github.com/c-mansfield"
-        icon  = "github"
-        icon_pack = "fab"
-    [[params.social]]
-        url   = "https://www.linkedin.com/in/cole-m-49b97510a"
-        icon  = "linkedin-in"
-        icon_pack = "fab"
-    [[params.social]]
-        url = "mailto:colemansfield@gmail.com"
-        icon = "paper-plane"
-        icon_pack = "fas"
-
-    [languages]
-        [languages.en.params]
-            footerText   = "Contact me at: colemansfield@gmail.com"

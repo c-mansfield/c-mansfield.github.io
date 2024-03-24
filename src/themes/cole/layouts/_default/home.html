@@ -1,7 +1,8 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range site.RegularPages }}
-    <h2 class="text-5xl">{{ .LinkTitle }}</h2>
-    <div class="mt-5">{{ .Content }}</div>
+    <h2 class="text-5xl text-center">{{ .LinkTitle }}</h2>
+    <div class="mt-5 text-center">{{ .Content }}</div>
+    <div class="mt-5 flex justify-center">{{ partial "socials.html" . }}</div>
   {{ end }}
 {{ end }}
