@@ -1,6 +1,6 @@
 FROM node:alpine as build
 
-ARG HUGO_VERSION=0.103.1
+ARG HUGO_VERSION=0.122.0
 
 # Get Hugo
 RUN apk add gcompat
