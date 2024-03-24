@@ -560,3 +560,7 @@ video {
 .text-center {
   text-align: center;
 }
+
+.font-jost {
+  font-family: Jost, sans-serif;
+}
