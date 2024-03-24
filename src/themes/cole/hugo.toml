@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'en-uk'
+title = 'cole theme'
 
 [[menus.main]]
 name = 'Home'
@@ -8,14 +8,14 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Projects'
+pageRef = '/projects'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
-weight = 30
+name = 'Blog'
+pageRef = '/blog'
+weight = 20
 
 [module]
   [module.hugoVersion]
