@@ -547,3 +547,16 @@ video {
 .block {
   display: block;
 }
+
+.w-full {
+  width: 100%;
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.text-center {
+  text-align: center;
+}
