@@ -3,11 +3,11 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="font-jost">
+<body class="font-jost flex h-screen min-h-full flex-col justify-center">
   <header>
     {{ partial "header.html" . }}
   </header>
-  <main>
+  <main class="flex flex-col flex-grow place-content-center text-center">
     {{ block "main" . }}{{ end }}
   </main>
   <footer>

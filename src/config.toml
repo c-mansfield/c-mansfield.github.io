@@ -1,6 +1,6 @@
 languageCode = 'en-uk'
 title = 'Cole Mansfield'
-theme = "introduction"
+theme = "cole"
 baseURL = ""
 relativeURLs = "True"
 
